@@ -3,18 +3,18 @@ import React, { createContext, ReactNode } from 'react'
 import { auth, firebase } from '../services/firebase'
 
 type User = {
-  id: string;
-  name: string;
-  avatar: string;
+  id: string
+  name: string
+  avatar: string
 }
 
 type AuthContextType = {
-  user: User | undefined; // undefined cos' at first time the user is not logged in, so there is no info
-  signInWithGoogle: () => Promise<void>; // don't return anything <void>
+  user: User | undefined // undefined cos' at first time the user is not logged in, so there is no info
+  signInWithGoogle: () => Promise<void> // don't return anything <void>
 }
 
 type AuthContextProviderProps = {
-  children : ReactNode;
+  children : ReactNode
 }
 
 export const AuthContext = createContext({} as AuthContextType)
